@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial,sans-serif;
+}
+.ümumi {
+    display:flex;
+    gap: 20px;
+}
+.left-side {
+   float: left;
+   width: 26%;
+   background-color: rgb(5, 5, 70);
+   padding: 20px;
+   height: 120vh;
+   color:   aliceblue;
+}
+.left-side h3 {
+    font-weight: bold;
+}
+.left-side p {
+    font-size: 12px;
+}
+.left-side li {
+    font-size: 12px;
+}
+.left-side h3 {
+    border-bottom: 1px solid rgb(253, 254, 255);
+}
+.right-side h1 {
+    font-weight: bold;
+    color: black
+}
+.right-side h4 {
+    font-weight: normal;
+    color: blue;
+}
+.right-side h3 {
+    font-weight: 600;
+}
+.right-side h3 {
+    border-bottom: 1px solid black;
+}
+.reference-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .ref-box {
+    width: 45%;
+  } 

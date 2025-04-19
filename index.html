@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ümumi">
+<div class="left-side">
+<img src="profil.png" alt="Profil şəkli" style="width: 120px; border-radius: 50%;">
+<!--CONTACT-->
+<h3>CONTACT</h3>
+<p>+123-456-7890</p>
+<p>hello@reallygreatside.com</p>
+<p>123 Anywhere St.,Any City</p>
+<p>www.reallygreatsite.com</p>
+<!--EDUCATION-->
+<h3 onclick="toggleSection('educationList')" style="cursor: pointer;">EDUCATION</h3>
+<div id="educationList" style="display: block;">
+    <p>2029-2030</p>
+    <p>WARDIERE UNIVERSITY</p>
+    <ul>
+       <li>Master of Business Management</li>
+    </ul>
+    <p>2025-2029</p>
+    <p>WARDIERE UNIVERSITY</p>
+    <ul>
+        <li>Bachelor of Business</li>
+        <li>GPA:3.8/4.0</li>
+    </ul>
+</div>
+<input type="text" id="newEducation" placeholder="Yeni təhsil əlavə et">
+<button onclick="addEducation()">Əlavə et</button>
+<ul id="educationListExtra"></ul>
+<!--SKILLS-->
+<h3 onclick="toggleSection('skillsList')" style="cursor: pointer;">SKILLS</h3>
+<ul id="skillsList" style="display: block;">
+  <li>Project Management</li>
+  <li>Public Relations</li>
+  <li>Teamwork</li>
+  <li>Time Management</li>
+  <li>Leadership</li>
+  <li>Effective Communication</li>
+  <li>Critical Thinking</li>
+</ul>
+<input type="text" id="newSkill" placeholder="Yeni bacarıq əlavə et">
+<button onclick="addSkill()">Əlavə et</button>
+<ul id="skillsListExtra"></ul>
+<!--LANGUAGES-->
+<h3>LANGUAGES</h3>
+<ul>
+    <li>English (Fluent)</li>
+    <li>French (Fluent)</li>
+    <li>Germant (basics)</li>
+    <li>Spanish (Intermediate)</li>
+</ul>
+</div>
+<div class="right-side">
+<h1>RICHARD SANCHEZ</h1>
+<h4>MARKETING MANAGER</h4>
+<!-- PROFILE -->
+<h3>PROFILE</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eismod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation.
+ Ut enim ad minim veniam quis nostruc exercitation.</p>
+<h3>Extra info</h3>
+<button onclick="faktGoster()">Show</button>
+<p id="melumat"></p>    
+<!--Work exprience-->
+<h3>WORK EXPERIENCE </h3>
+<p><strong>Borcelle Studio</strong></p>
+<p>Marketing Manager & Specialist</p>
+   <li>Develop and execute comprehensive marketing strategies and campaigns that align with the company's goals and objectives.</li>
+   <li>Lead, mentor, and manage a high-performing marketing team, rostering a collaborative and results-ariven work environment.</li>
+   <li>Monitor brand consistency across marketing channels and materials. </li>
+<p><strong>Fauget Studio</strong></p>
+<p>Marketing Manager & Specialist</p>
+    <li>Create and manage the marketing buagel, ensuring emcient allocation of resources and optimizing ROl.</li>
+    <li>Oversee market research to identify emerging trends, customer needs, and competitor strategies.</li>
+    <li>Monitor brand consistency across marketing channels and materials.</li>
+<p><strong> Studio   Shodwe </strong></p>
+<p>Marketing Manager & Specialist</p>
+    <li>Develop and maintain strong relationships with partners, agencies, and vendors to support marketing initiatives.</li>
+    <li>Monitor and maintain brand consistency across all marketing channels and materials.</li>
+<input type="text" id="newWork" placeholder="Yeni iş təcrübəsi əlavə et">
+<button onclick="addWork()">Əlavə et</button>
+<ul id="workListExtra"></ul>
+<!--REFERENCE-->
+<h3>REFERENCE</h3>
+<div class="reference-section">
+<div class="ref-box">
+<p><strong>Estelle Darcy</strong></p>
+<p>Wardiere Inc. / CTO</p>
+<p><strong>Phone:</strong> 123-456-7890</p>
+<p><strong>Email:</strong> hello@reallygreatsite.com</p>
+</div>
+  
+<div class="ref-box">
+<p><strong>Harper Richard</strong></p>
+<p>Wardiere Inc. / CEO</p>
+<p><strong>Phone:</strong> 123-456-7890</p>
+<p><strong>Email:</strong> hello@reallygreatsite.com</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+    function faktGoster() {
+      document.getElementById("melumat").innerText = 
+        "“After joining each company, Richard developed new sales strategies that consistently helped double the monthly revenue within a short period.”";
+    }
+  </script>
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      if (section.style.display === "none") {
+        section.style.display = "block";
+      } else {
+        section.style.display = "none";
+      }
+    }
+  </script> 
+  <script> 
+  function addEducation() {
+    var input = document.getElementById("newEducation");
+    var value = input.value;
+    if (value.trim() !== "") {
+      var li = document.createElement("li");
+      li.innerText = value;
+      document.getElementById("educationListExtra").appendChild(li);
+      input.value = "";
+    }
+  }
+</script>
+<script>
+    function addSkill() {
+    var input = document.getElementById("newSkill");
+    var value = input.value;
+    if (value.trim() !== "") {
+        var li = document.createElement("li");
+        li.innerText = value;
+        document.getElementById("skillsListExtra").appendChild(li);
+        input.value = "";
+    }
+}
+</script>
+<script> 
+    function addWork() {
+    var input = document.getElementById("newWork");
+    var value = input.value;
+    if (value.trim() !== "") {
+        var li = document.createElement("li");
+        li.innerText = value;
+        document.getElementById("workListExtra").appendChild(li);
+        input.value = "";
+    }
+}
+</script>
+<script>
+    function addSkill() {
+    var input = document.getElementById("newSkill");
+    var value = input.value;
+    if (value.trim() !== "") {
+        var li = document.createElement("li");
+        li.innerText = value;
+        document.getElementById("skillsList").appendChild(li);
+        input.value = "";
+    }
+}
+</script>
+  </body>
+  </html>
+</body>
+</html>
